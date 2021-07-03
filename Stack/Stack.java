@@ -1,11 +1,11 @@
 import java.util.*;
 
-public class Stack
+public class Stack<T>
 {
     private Node top;
     private int size;
 
-    public void push(int data)
+    public void push(T data)
     {
         Node nodeToPush = new Node(data);
         nodeToPush.next = top;
@@ -14,13 +14,13 @@ public class Stack
         size++;
     }
 
-    public int pop()
+    public T pop()
     {
-        int data;
+        T data;
 
         if (!isEmpty())
         {
-            data = top.value;
+            data = (T)top.value;
             top = top.next;
             size--;
         }
@@ -32,11 +32,11 @@ public class Stack
         return data;
     }
 
-    public int peek()
+    public T peek()
     {
         if (!isEmpty())
         {
-            return top.value;
+            return (T)top.value;
         }
 
         throw new EmptyStackException();
