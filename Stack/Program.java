@@ -11,8 +11,8 @@ public class Program
         System.out.println(stack.isEmpty());
         System.out.println(stack.size());
 
-        stack.pop();
-        stack.pop();
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
         System.out.println(stack.peek());
         System.out.println(stack.size());
     }
